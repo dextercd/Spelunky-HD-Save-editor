@@ -20,22 +20,19 @@ target_include_directories(save_editor PRIVATE
   "include"
 )
 
-target_link_libraries(save_editor )
+target_link_libraries(save_editor)
 
 find_package(Threads)
 find_package(wxWidgets REQUIRED core base adv richtext)
-find_package(Boost REQUIRED container)
 
 include(${wxWidgets_USE_FILE})
 
 target_include_directories(save_editor PRIVATE
 	${wxWidgets_INCLUDE_DIRS}
-	${Boost_INCLUDE_DIRS}
 )
 
 target_link_libraries(save_editor PRIVATE
 	${CMAKE_THREAD_LIBS_INIT}
 	${wxWidgets_LIBRARIES}
-	${Boost_LIBRARIES}
 )
 

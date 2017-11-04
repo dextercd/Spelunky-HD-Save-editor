@@ -1,7 +1,7 @@
 #include "editor.hpp"
 
 editor::editor(save& s, const save& o, wxWindow* parent)
-	: wxNotebook{parent, wxID_ANY}
+	: wxNotebook{parent, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxNB_MULTILINE}
 	, sav{s}
 	, original{o}
 {
