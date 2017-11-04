@@ -21,8 +21,8 @@ class motherframe : public wxFrame {
 	wxStatusBar* status_bar = nullptr;
 	editor* edit = nullptr;
 
-	save current_save;
-	save original_save;
+	save current_save{};
+	save original_save{};
 
 	void setup_menu()
 	{
@@ -91,6 +91,7 @@ public:
 		setup_editor();
 		setup_menu();
 		setup_status_bar();
+		open_file("default_save.sav");
 	}
 
 	void open_file(wxCommandEvent& event)
@@ -120,7 +121,12 @@ public:
 		if(result == wxID_CANCEL)
 			return;
 		
-		read_save(original_save, file_dialog.GetPath().ToStdString());
+		open_file(file_dialog.GetPath().ToStdString());
+	}
+
+	void open_file(const std::string& path)
+	{
+		read_save(original_save, path);
 		current_save = original_save;
 		edit->refresh();
 	}
