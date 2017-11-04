@@ -81,16 +81,16 @@ class motherframe : public wxFrame {
 public:
 	motherframe()
 		: wxFrame{
-			NULL,
+			nullptr,
 			wxID_ANY,
 			"Spelunky save editor.",
 			wxDefaultPosition,
-			wxSize{720, 480}
+			wxSize{480, 720}
 		}
 	{
+		setup_editor();
 		setup_menu();
 		setup_status_bar();
-		setup_editor();
 	}
 
 	void open_file(wxCommandEvent& event)

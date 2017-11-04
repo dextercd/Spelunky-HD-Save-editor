@@ -67,7 +67,7 @@ save_layout::save_layout()
 		int_value{"Items before death"                     , 17},
 		int_value{"Cave unlocked? (0 - 2)"                 , 134},
 		int_value{"Shortcuts unlocked (0 - 6)"             , 135},
-		int_value{"Second favor completed"                 , 136},
+		bool_value{"Second favor completed"                 , 136},
 		bool_value{"Place discovered: Mines"                , 265},
 		bool_value{"Place discovered: Jungle"               , 266},
 		bool_value{"Place discovered: Ice caves"            , 267},
