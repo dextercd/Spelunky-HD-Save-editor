@@ -39,3 +39,5 @@ target_link_libraries(SpelunkyHD_Save_Editor PRIVATE
 
 install(TARGETS SpelunkyHD_Save_Editor DESTINATION .)
 install(FILES default_save.sav DESTINATION .)
+
+include(CPack)
