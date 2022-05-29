@@ -32,7 +32,7 @@ target_include_directories(save_editor PRIVATE
 )
 
 target_link_libraries(save_editor PRIVATE
-    ${CMAKE_THREAD_LIBS_INIT}
+    Threads::Threads
     ${wxWidgets_LIBRARIES}
 )
 
