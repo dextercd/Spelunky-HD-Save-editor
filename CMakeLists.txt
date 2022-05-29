@@ -36,3 +36,6 @@ target_link_libraries(SpelunkyHD_Save_Editor PRIVATE
     ${wxWidgets_LIBRARIES}
 )
 
+
+install(TARGETS SpelunkyHD_Save_Editor DESTINATION .)
+install(FILES default_save.sav DESTINATION .)
