@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.8)
 
 enable_testing()
 
-project(spelunky_tools VERSION 1.0.0)
+project(SpelunkyHD_Save_Editor VERSION 1.0.0)
 
 
 add_executable(SpelunkyHD_Save_Editor WIN32
