@@ -5,7 +5,7 @@ enable_testing()
 project(spelunky_tools)
 
 
-add_executable(save_editor
+add_executable(save_editor WIN32
   "src/main.cpp"
   "src/editor.cpp"
   "src/element_editor.cpp"
